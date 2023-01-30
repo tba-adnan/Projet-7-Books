@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { AwesomeButton } from 'react-awesome-button';
 import cogoToast from "cogo-toast";
+import { BeakerIcon, TrashIcon } from "@primer/octicons-react"; // custom icons
 
 export default class Saved extends Component {
     constructor(){
@@ -29,6 +30,23 @@ delBook = (id) => {
 
   render() {
     return (
+
+
+<div>
+
+<div>
+      <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
+        <div class="mb-2 sm:mb-0">
+        </div>
+        <div class="space-x-4">
+        <AwesomeButton type="secondary" href="/">cherchez</AwesomeButton>
+        <AwesomeButton type="primary" href="/savings">Beta</AwesomeButton>
+        </div>
+      </nav>
+</div>
+
+
+
 <div>
       <div className="flex flex-wrap">
         {this.state.savings.map(book => (
@@ -49,6 +67,7 @@ delBook = (id) => {
             </div>
           </div>
         ))}
+      </div>
       </div>
       </div>
     );

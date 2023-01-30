@@ -8,6 +8,7 @@ import 'react-awesome-button/dist/styles.css';
 import { NumberPicker } from "react-widgets";
 import "react-widgets/styles.css";
 import cogoToast from "cogo-toast";
+import { Link } from "react-router-dom";
 
 
 
@@ -90,7 +91,17 @@ render(){
 
     return(
       
-      
+ <div>
+      <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
+        <div class="mb-2 sm:mb-0">
+        </div>
+        <div>
+        <AwesomeButton type="secondary" href="/saved">Mes favoris</AwesomeButton>
+        </div>
+      </nav>
+
+
+
 <div class="min-h-min bg-transparent flex flex-col justify-center ">
   <div class="hover:backdrop-blur-sm relative p-12 w-full sm:max-w-2xl sm:mx-auto my-px ">
     <div class="overflow-hidden z-0 rounded-full relative p-3 shadow-lg">
@@ -101,8 +112,9 @@ render(){
         <div class="glow glow-1 z-10 bg-pink-400 absolute"></div>
         <div class="glow glow-2 z-20 bg-purple-400 absolute"></div>
         <div class="glow glow-3 z-30 bg-yellow-400 absolute"></div>
-        <div class="glow glow-4 z-40 bg-blue-400 absolute"></div>
+        <div class="glow glow-4 z-40 bg-blue-400 absolute"></div>       
     </div>
+    {/* <AwesomeButton type="secondary">Anchor</AwesomeButton> */}
     
     
     <div class="mt-[7px] ml-[25px] w-48 flex grid">
@@ -165,5 +177,6 @@ Lang : {book.volumeInfo.language}
 </div> 
 <br></br>
 {/* Overflow end! */}
+</div>
 </div>
 );}}
